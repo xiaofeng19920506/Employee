@@ -1,18 +1,18 @@
 package com.example.employee;
 
-public class Addmember {
+public class MemberModal {
     String Name;
     String Jobtitle;
     String Gender;
     String Phone;
     String ID;
 
-    public Addmember(String name, String jobtitle, String gender, String phone, String ID) {
-        Name = new String(name);
-        Jobtitle = new String(jobtitle);
-        Gender = new String(gender);
-        Phone = new String(phone);
-        this.ID = new String(ID);
+    public MemberModal(String name, String jobtitle, String gender, String phone, String ID) {
+        this.Name = name;
+        this.Jobtitle = jobtitle;
+        this.Gender = gender;
+        this.Phone = phone;
+        this.ID = ID;
     }
 
     public String getName() {
@@ -54,4 +54,9 @@ public class Addmember {
     public void setID(String ID) {
         this.ID = ID;
     }
+
+    public String toString() {
+        return "";
+    }
+
 }
