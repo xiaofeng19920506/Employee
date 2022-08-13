@@ -1,59 +1,43 @@
 package com.example.employee;
 
+import javafx.beans.property.SimpleStringProperty;
+
 public class MemberModal {
-    String Name;
-    String Jobtitle;
-    String Gender;
-    String Phone;
-    String ID;
+    SimpleStringProperty Name;
+    SimpleStringProperty Jobtitle;
+    SimpleStringProperty Gender;
+    SimpleStringProperty Phone;
+    SimpleStringProperty ID;
 
     public MemberModal(String name, String jobtitle, String gender, String phone, String ID) {
-        this.Name = name;
-        this.Jobtitle = jobtitle;
-        this.Gender = gender;
-        this.Phone = phone;
-        this.ID = ID;
+        this.Name = new SimpleStringProperty(name);
+        this.Jobtitle =  new SimpleStringProperty(jobtitle);
+        this.Gender = new SimpleStringProperty(gender);
+        this.Phone = new SimpleStringProperty(phone);
+        this.ID = new SimpleStringProperty(ID);
     }
 
-    public String getName() {
+    public SimpleStringProperty nameProperty() {
         return Name;
     }
 
-    public void setName(String name) {
-        Name = name;
-    }
-
-    public String getJobtitle() {
+    public SimpleStringProperty jobtitleProperty() {
         return Jobtitle;
     }
 
-    public void setJobtitle(String jobtitle) {
-        Jobtitle = jobtitle;
-    }
-
-    public String getGender() {
+    public SimpleStringProperty genderProperty() {
         return Gender;
     }
 
-    public void setGender(String gender) {
-        Gender = gender;
-    }
-
-    public String getPhone() {
+    public SimpleStringProperty phoneProperty() {
         return Phone;
     }
 
-    public void setPhone(String phone) {
-        Phone = phone;
-    }
-
-    public String getID() {
+    public SimpleStringProperty IDProperty() {
         return ID;
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
-    }
+
 
     public String toString() {
         return "";
